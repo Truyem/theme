@@ -1,0 +1,148 @@
+/**
+ * @name Discord Mobile Web
+ * @author Custom
+ * @version 1.6.0
+ * @description Theme tối ưu cho Discord Web trên điện thoại - Profile popup gọn gàng
+*/
+
+/* ===== ẨN PHẦN BÊN PHẢI (TABS, GAMES) ===== */
+
+/* Ẩn tab bar trong profile popup */
+.user-profile-modal-v2 [class*="tabBar"],
+.user-profile-modal-v2 [class*="tabBarContainer"],
+[class*="userProfileModalInner"] [class*="tabBar"],
+[class*="userProfileModalInner"] [class*="tabBarContainer"],
+[class*="fullscreenOnMobile"] [class*="tabBar"],
+[class*="fullscreenOnMobile"] [class*="tabBarContainer"] {
+    display: none !important;
+}
+
+/* Ẩn panel bên phải (games, activity) */
+[class*="userProfileModalInner"]>div:nth-child(2),
+[class*="userProfileModalInner"]>div:last-child:not(:first-child),
+.user-profile-modal-v2>div>div:nth-child(2) {
+    display: none !important;
+}
+
+/* ===== THU NHỎ POPUP ===== */
+
+/* Fullscreen modal container */
+[class*="fullscreenOnMobile"] {
+    width: fit-content !important;
+    width: -moz-fit-content !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    margin: auto !important;
+}
+
+/* User profile modal v2 */
+.user-profile-modal-v2 {
+    width: fit-content !important;
+    width: -moz-fit-content !important;
+    min-width: unset !important;
+    max-width: unset !important;
+}
+
+/* Inner container */
+[class*="userProfileModalInner"] {
+    width: fit-content !important;
+    width: -moz-fit-content !important;
+    min-width: unset !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Profile card - phần bên trái */
+[class*="userProfileModalInner"]>div:first-child {
+    width: fit-content !important;
+    width: -moz-fit-content !important;
+    min-width: 340px !important;
+    max-width: 420px !important;
+    flex-shrink: 0 !important;
+}
+
+/* User profile outer container */
+[class*="userProfileOuter_"],
+[class*="userProfileOuter-"] {
+    width: fit-content !important;
+    min-width: 340px !important;
+    max-width: 420px !important;
+}
+
+/* Banner trong profile */
+[class*="userProfileModalInner"] [class*="banner"],
+.user-profile-modal-v2 [class*="banner"] {
+    width: 100% !important;
+    min-width: 340px !important;
+    max-width: 420px !important;
+}
+
+/* ===== RESPONSIVE - CĂN GIỮA TRÊN MOBILE ===== */
+
+@media screen and (max-width: 768px) {
+
+    /* Căn giữa modal trên mobile */
+    [class*="fullscreenOnMobile"],
+    .user-profile-modal-v2,
+    [class*="layer_"] [class*="root_"] {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+    }
+
+    [class*="userProfileModalInner"]>div:first-child,
+    [class*="userProfileOuter_"],
+    [class*="userProfileOuter-"],
+    [class*="userProfileModalInner"] [class*="banner"],
+    .user-profile-modal-v2 [class*="banner"] {
+        min-width: 300px !important;
+        max-width: 90vw !important;
+        width: 90vw !important;
+    }
+}
+
+/* ===== SCROLL MƯỢT ===== */
+
+[class*="userProfileOuter_"],
+[class*="userProfileOuter-"] {
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* ===== BANNER PHỦ KÍN KHUNG ===== */
+
+/* Xoá padding/margin trên cùng */
+[class*="userProfileModalInner"],
+.user-profile-modal-v2,
+[class*="fullscreenOnMobile"] {
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+}
+
+/* Banner full width và không có gap */
+[class*="userProfileModalInner"] [class*="banner"],
+.user-profile-modal-v2 [class*="banner"],
+[class*="profileBanner"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+/* Profile card không có gap trên */
+[class*="userProfileModalInner"]>div:first-child,
+[class*="userProfileOuter_"],
+[class*="userProfileOuter-"] {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* Xoá khoảng trống của modal root */
+[class*="fullscreenOnMobile"]>div:first-child,
+.user-profile-modal-v2>div:first-child {
+    padding: 0 !important;
+    margin: 0 !important;
+}
