@@ -76,20 +76,9 @@
     max-width: 420px !important;
 }
 
-/* ===== RESPONSIVE - CĂN GIỮA TRÊN MOBILE ===== */
+/* ===== RESPONSIVE ===== */
 
-@media screen and (max-width: 768px) {
-
-    /* Căn giữa modal trên mobile */
-    [class*="fullscreenOnMobile"],
-    .user-profile-modal-v2,
-    [class*="layer_"] [class*="root_"] {
-        position: fixed !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        margin: 0 !important;
-    }
+@media screen and (max-width: 420px) {
 
     [class*="userProfileModalInner"]>div:first-child,
     [class*="userProfileOuter_"],
@@ -97,8 +86,7 @@
     [class*="userProfileModalInner"] [class*="banner"],
     .user-profile-modal-v2 [class*="banner"] {
         min-width: 300px !important;
-        max-width: 90vw !important;
-        width: 90vw !important;
+        max-width: 95vw !important;
     }
 }
 
