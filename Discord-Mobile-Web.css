@@ -76,21 +76,18 @@
     max-width: 420px !important;
 }
 
-/* ===== RESPONSIVE - CĂN GIỮA TRÊN MOBILE ===== */
+/* ===== RESPONSIVE - MOBILE ===== */
 
 @media screen and (max-width: 768px) {
 
-    /* Căn giữa modal trên mobile */
+    /* Modal căn giữa bằng margin auto */
     [class*="fullscreenOnMobile"],
-    .user-profile-modal-v2,
-    [class*="layer_"] [class*="root_"] {
-        position: fixed !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        margin: 0 !important;
+    .user-profile-modal-v2 {
+        margin: auto !important;
+        width: auto !important;
     }
 
+    /* Profile card full width trên mobile */
     [class*="userProfileModalInner"]>div:first-child,
     [class*="userProfileOuter_"],
     [class*="userProfileOuter-"],
