@@ -70,15 +70,11 @@
 
 /* Banner trong profile */
 [class*="userProfileModalInner"] [class*="banner"],
-.user-profile-modal-v2 [class*="banner"],
-[class*="profileBanner"] {
+.user-profile-modal-v2 [class*="banner"] {
     width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    background-size: cover !important;
-    background-position: center !important;
+    min-width: 340px !important;
+    max-width: 420px !important;
+    transform: translateX(5px) !important;
 }
 
 /* ===== RESPONSIVE - CĂN GIỮA TRÊN MOBILE ===== */
