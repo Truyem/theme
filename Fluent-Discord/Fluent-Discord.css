@@ -8681,3 +8681,15 @@ html[lang^=en-].theme-dark .toolbar__9293f .iconWrapper__9293f[aria-label="Keywo
 .theme-dark .vc-ranb-button.button__201d5 .contents__201d5:active {
   background-color: rgba(255, 255, 255, 0.0419);
 }
+/* Fix thanh xanh duong bi loi ra o emoji/sticker/GIF picker */
+#emoji-picker-tab::before,
+#gif-picker-tab::before,
+#sticker-picker-tab::before,
+.theme-dark .nav__08434 .navButtonActive__08434::before,
+[class*="navButtonActive"]::before {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+}
